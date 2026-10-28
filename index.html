@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, My Love</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="is-locked">
+    <section class="love-lock" id="loveLock" aria-label="Romantic unlock screen">
+      <div class="love-lock__content">
+        <p class="eyebrow">A secret for her</p>
+        <h2>Unlock my heart</h2>
+        <p class="love-lock__message" id="lockMessage">
+          Draw our little love pattern to open your birthday surprise.
+        </p>
+
+        <div class="pattern-lock" id="patternLock" aria-label="Pattern lock">
+          <svg class="pattern-lock__trail" id="patternTrail" aria-hidden="true"></svg>
+          <button class="pattern-dot" type="button" data-dot="1" aria-label="Pattern dot 1"></button>
+          <button class="pattern-dot" type="button" data-dot="2" aria-label="Pattern dot 2"></button>
+          <button class="pattern-dot" type="button" data-dot="3" aria-label="Pattern dot 3"></button>
+          <button class="pattern-dot" type="button" data-dot="4" aria-label="Pattern dot 4"></button>
+          <button class="pattern-dot" type="button" data-dot="5" aria-label="Pattern dot 5"></button>
+          <button class="pattern-dot" type="button" data-dot="6" aria-label="Pattern dot 6"></button>
+          <button class="pattern-dot" type="button" data-dot="7" aria-label="Pattern dot 7"></button>
+          <button class="pattern-dot" type="button" data-dot="8" aria-label="Pattern dot 8"></button>
+          <button class="pattern-dot" type="button" data-dot="9" aria-label="Pattern dot 9"></button>
+        </div>
+
+        <p class="love-lock__hint" id="lockHint">
+          my whole world 🌎 starts with
+        </p>
+        <p class="love-lock__status" id="lockStatus" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="wish-gate" id="wishGate" aria-label="Birthday candle wish" hidden>
+      <div class="wish-gate__content">
+        <p class="eyebrow">Before the surprise</p>
+        <h2 id="wishGateTitle">Blow the candles, my love</h2>
+        <p class="wish-gate__message" id="wishGateMessage">
+          Close your eyes for a second. This cake is for the wish your heart
+          wants most.
+        </p>
+
+        <div class="cake-scene" id="cakeScene" aria-hidden="true">
+          <div class="cake-sparkles">
+            <span class="cake-sparkle cake-sparkle--one"></span>
+            <span class="cake-sparkle cake-sparkle--two"></span>
+            <span class="cake-sparkle cake-sparkle--three"></span>
+            <span class="cake-sparkle cake-sparkle--four"></span>
+            <span class="cake-sparkle cake-sparkle--five"></span>
+          </div>
+          <div class="cake">
+            <div class="candles">
+              <div class="candle">
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+              <div class="candle candle--tall">
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+              <div class="candle">
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+            </div>
+            <div class="cake__top"></div>
+            <div class="cake__middle"></div>
+            <div class="cake__bottom"></div>
+            <div class="cake__plate"></div>
+          </div>
+        </div>
+
+        <button class="button button--primary" id="blowCandlesButton" type="button">
+          Blow the candles
+        </button>
+
+        <div class="wish-question" id="wishQuestion" hidden>
+          <h3 id="wishQuestionTitle">What do you want most in life?</h3>
+          <p id="wishQuestionText">
+            Make your wish here. I hope life brings it to you beautifully.
+          </p>
+          <textarea
+            id="lifeWish"
+            rows="3"
+            placeholder="Write your wish..."
+            aria-label="Write your wish"
+          ></textarea>
+          <button class="button button--primary" id="openBirthdayButton" type="button">
+            Keep this wish and open my surprise
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <main class="site-shell">
+      <section class="hero" aria-label="Birthday greeting">
+        <div class="hero__media" id="heroPhoto"></div>
+        <div class="hero__shade"></div>
+        <div class="hero__content">
+          <p class="eyebrow">For the one who owns my smile</p>
+          <h1 id="mainTitle">Happy Birthday, My Love</h1>
+          <p class="hero__message" id="heroMessage">
+            Today is all about you, your laugh, your heart, and every beautiful
+            little thing that makes you unforgettable.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#letter">Read my letter</a>
+            <a class="button button--ghost" href="#gallery">See our memories</a>
+          </div>
+        </div>
+        <button class="music-button" id="musicButton" type="button" aria-label="Play music">
+          <span class="music-button__icon" aria-hidden="true"></span>
+        </button>
+      </section>
+
+      <section class="countdown" aria-label="Birthday countdown">
+        <div class="countdown__item">
+          <span id="days">00</span>
+          <p>Days</p>
+        </div>
+        <div class="countdown__item">
+          <span id="hours">00</span>
+          <p>Hours</p>
+        </div>
+        <div class="countdown__item">
+          <span id="minutes">00</span>
+          <p>Minutes</p>
+        </div>
+        <div class="countdown__item">
+          <span id="seconds">00</span>
+          <p>Seconds</p>
+        </div>
+      </section>
+
+      <section class="section section--split" id="letter">
+        <div class="section__intro">
+          <p class="eyebrow">A little letter</p>
+          <h2 id="letterTitle">To my favorite person</h2>
+        </div>
+        <div class="letter-stage" id="letterStage">
+          <div class="letter" id="letterText"></div>
+          <div class="letter-curtains" aria-hidden="true">
+            <div class="letter-curtain letter-curtain--left"><span>♥</span></div>
+            <div class="letter-curtain letter-curtain--right"><span>♥</span></div>
+          </div>
+          <div class="letter-heart-burst" id="letterHeartBurst" aria-hidden="true"></div>
+          <button
+            class="letter-open-button"
+            id="openLetterButton"
+            type="button"
+            aria-expanded="false"
+            aria-label="Open my letter"
+          >
+            <span class="letter-open-button__heart" aria-hidden="true">♥</span>
+            <span>Open</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section memory-section" id="gallery">
+        <div class="section__intro section__intro--center">
+          <p class="eyebrow">Our little forever</p>
+          <h2>The moments I never want to stop replaying with you</h2>
+          <p class="memory-section__note">
+            Every photo holds a tiny piece of us, and every piece of us feels like home.
+          </p>
+          <div class="memory-section__hearts" aria-hidden="true">
+            <span>♡</span>
+            <span>♥</span>
+            <span>♡</span>
+          </div>
+        </div>
+
+        <div class="gallery" id="galleryGrid"></div>
+      </section>
+
+      <section class="section section--slider">
+        <div class="slider">
+          <button class="slider__button" id="prevPhoto" type="button" aria-label="Previous photo">
+            <span aria-hidden="true">&lsaquo;</span>
+          </button>
+          <figure class="slider__frame">
+            <img id="sliderPhoto" src="" alt="" />
+            <figcaption id="sliderCaption"></figcaption>
+          </figure>
+          <button class="slider__button" id="nextPhoto" type="button" aria-label="Next photo">
+            <span aria-hidden="true">&rsaquo;</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section wishes" aria-label="Birthday wishes">
+        <div class="section__intro section__intro--center">
+          <p class="eyebrow">Tiny reasons</p>
+          <h2>Why you are so loved</h2>
+        </div>
+        <div class="wish-grid" id="wishGrid"></div>
+      </section>
+
+      <section class="finale">
+        <p class="eyebrow">Make a wish</p>
+        <h2 id="finalTitle">This year, I hope life loves you back loudly.</h2>
+        <p id="finalMessage">
+          May every dream you whisper to yourself find its way to you.
+        </p>
+        <button class="button button--primary" id="confettiButton" type="button">
+          Celebrate again
+        </button>
+      </section>
+    </main>
+
+    <div class="love-corner" aria-hidden="true">
+      <img src="assets/love-couple.png" alt="" />
+    </div>
+
+    <canvas class="confetti" id="confettiCanvas" aria-hidden="true"></canvas>
+    <audio id="birthdayMusic" loop preload="auto">
+      <source src="assets/music.m4a" type="audio/mp4" />
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>
